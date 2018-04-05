@@ -1,0 +1,26 @@
+{
+  "name": "imoracle",
+  "version": "1.0.0",
+  "description": "Test assertion assigned to Kostyantyn Didenko by Andras Kornai as a part of SecondMind job position interview - April 5th, 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itorepo/imoracle.git"
+  },
+  "keywords": [
+    "secondmind",
+    "job",
+    "interview",
+    "test",
+    "assertion"
+  ],
+  "author": "Kostyantyn Didenko <kdidenko@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/itorepo/imoracle/issues"
+  },
+  "homepage": "https://github.com/itorepo/imoracle#readme"
+}
