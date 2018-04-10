@@ -15,7 +15,7 @@ Check it by running:
 	node --version
 	npm --version
 ````
-Node version ^9.5.0 and NPM version 5.6.0 must be fine
+Node version `^9.5.0` and NPM version `5.6.0` must be fine
 
 
 Finaly, you will need the TypeScript2 compiling and linting binaries installed:
@@ -50,8 +50,8 @@ to make it up and running:
 		|	|-- config/
 		|	|-- controllers/
 		|	|-- models/
-│		|	|-- views/
-│   └	|	`-- public/
+		|	|-- views/
+		|	`-- public/
 		|
 		|-- LICENSE
 		|-- package.json*
