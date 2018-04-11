@@ -1,4 +1,4 @@
-# N[ode.js] T[ypeScript] E[xpress] Starter Application - [nte-starter]
+# N[ode.js] T[ypeScript] E[xpress] Starter Application
 ----
 
 Set of best practices for creating NTE stack based applications applied from different sources into resulting minimum package required to begin the development of scalable web services.

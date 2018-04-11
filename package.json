@@ -4,6 +4,11 @@
   "description": "Node.js TypeScript Express - starter application",
   "main": "dist/server.js",
   "scripts": {
+	"build": "npm run build-ts",
+	"test": "npm run test",
+	"serve": "node dist/server.js",
+	"build-ts": "tsc -p ./tsconfig.json",
+	"tslint": "tslint -c tslint.json -p tsconfig.json",
     "test": "npm run test"
   },
   "repository": {
