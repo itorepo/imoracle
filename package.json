@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/itorepo/nte-starter.git"
+    "url": "https://github.com/itorepo/imoracle.git"
   },
   "keywords": [
     "Node.js",
@@ -26,9 +26,9 @@
   "author": "Kostyantyn Didenko <kdidenko@ito-global.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/itorepo/nte-starter/issues"
+    "url": "https://github.com/itorepo/imoracle/issues"
   },
-  "homepage": "https://github.com/itorepo/nte-starter#readme",
+  "homepage": "https://github.com/itorepo/imoracle#readme",
   "devDependencies": {
     "@types/express": "^4.11.1",
     "@types/node": "^9.6.4",
