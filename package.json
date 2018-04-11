@@ -4,12 +4,12 @@
   "description": "Node.js TypeScript Express - starter application",
   "main": "dist/server.js",
   "scripts": {
-	"build": "npm run build-ts",
-	"test": "npm run test",
-	"serve": "node dist/server.js",
-	"build-ts": "tsc -p ./tsconfig.json",
-	"tslint": "tslint -c tslint.json -p tsconfig.json",
-    "test": "npm run test"
+    "build": "npm run copy-assets && npm run build-ts",
+    "test": "npm run test",
+    "serve": "node dist/server.js",
+    "build-ts": "tsc -p ./tsconfig.json",
+	"copy-assets": "ts-node static.ts",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "shelljs": "^0.8.1"
   }
 }
