@@ -33,7 +33,7 @@ Once you have all this software installed on you machine, all you need is just f
 to make it up and running:
 ````bash
 	cd working_dir
-	git clone https://github.com/itorepo/nte-starter.git
+	git clone https://github.com/itorepo/imoracle.git
 	cd nte-starter
 	npm install
 	npm run start
@@ -43,19 +43,62 @@ to make it up and running:
 ----
 
 ````bash
-	/nte-starter/
+	/imoracle/
 		|-- dist/
 		|-- test/
+		|-- views/
 		|-- src/
 		|	|-- config/
 		|	|-- controllers/
 		|	|-- models/
-		|	|-- views/
 		|	`-- public/
 		|
 		|-- LICENSE
+		|-- Dockerfile
 		|-- package.json*
 		|-- package-lock.json*
 		`-- README.md
 ````
 
+
+### Using the Docker image
+
+Go to the directory that has your Dockerfile and run the following command
+````bash
+	$ docker build -t <your username>/imoracle .
+````
+
+Your image will now be listed by Docker:
+````
+	$ docker images
+````
+
+Run the image:
+````
+	$ docker run -p 8080:8001 -d <your username>/imoracle
+````
+
+with `-d` the container runs in detached mode, leaving the container running in the background.
+The `-p` flag redirects a public port to a private port inside the container
+
+Print the output of your app:
+````bash
+	# Get container ID
+	$ docker ps
+
+	# Print app output
+	$ docker logs imoracle
+
+	# Example
+	Running on http://localhost:8080
+````
+
+
+
+
+If you need to go inside the container you can use the exec command:
+	# Enter the container
+	$ docker exec -it imoracle /bin/bash
+
+To test your app, get the port of your app that Docker mapped:
+	$ docker ps
