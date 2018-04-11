@@ -12,8 +12,8 @@ RUN npm install
 # RUN npm install --only=production
 
 # Build and Bundle app source
-RUN npm run build
 COPY . .
+RUN npm run build
 
 # define app ports
 ENV PORT 8001
