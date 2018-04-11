@@ -1,6 +1,6 @@
 {
-	"name": "nte-starter",
-	"version": "0.0.1",
+	"name": "imoracle",
+	"version": "1.0.1",
 	"description": "Node.js TypeScript Express - starter application",
 	"main": "dist/server.js",
 	"scripts": {
@@ -8,7 +8,7 @@
 		"test": "npm run test",
 		"serve": "node dist/server.js",
 		"build-ts": "tsc -p ./tsconfig.json",
-	"copy-assets": "ts-node ./static.ts",
+		"copy-assets": "ts-node ./static.ts",
 		"tslint": "tslint -c tslint.json -p tsconfig.json"
 	},
 	"repository": {

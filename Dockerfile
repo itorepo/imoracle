@@ -10,7 +10,9 @@ COPY package*.json ./
 RUN npm install
 # When building code for production
 # RUN npm install --only=production
-
+COPY ./views ./
+RUN mkdir -p ./src
+COPY ./src/public ./src/
 COPY ./static.ts ./
 
 # Build and Bundle app source
