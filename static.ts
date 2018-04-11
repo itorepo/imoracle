@@ -9,3 +9,4 @@ shell.cp("-R", "./views", "./dist/");
 // finally, add public assets
 shell.cp("-R", "./src/public", "./dist/");
 
+

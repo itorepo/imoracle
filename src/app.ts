@@ -1,29 +1,52 @@
 import express from "express";
 import path from "path";
 
-
-// create express server
-const app = express();
-
-
-// prepare server runtime parameters
-app.set("port", process.env.PORT || 3001);
-// configure server view engine
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
-// setting html pretty-print
-app.locals.pretty = true;
-app.use(
-	express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
-);
+// importing routes
+import * as homeController from "./controllers/home";
 
 
-// importing all project controllers
-import * as homeController from "./controllers/home"
+class App {
 
-// defining routes handling points
-app.get("/", homeController.index);
+	private engine = express();
+
+	constructor ()	{
+		// do the server initialization job
+		this.doServerSetup();
+		this.doRenderingSetup();
+		this.doAssetsSetup();
+		this.mountRoutes();
+	}
+
+	private mountRoutes() {
+		this.engine.get("/", homeController.index);
+	}
+
+	private doServerSetup() {
+		this.engine.set("port", process.env.PORT || 3001);
+	}
+
+	private doRenderingSetup() {
+		this.engine.set("views", path.join(__dirname, "views"));
+		this.engine.set("view engine", "pug");
+		this.engine.locals.pretty = true;
+	}
+
+	private doAssetsSetup() {
+		this.engine.use (
+			express.static (
+				path.join (__dirname, "public"), {
+					maxAge: 3155759998 
+				}
+			)
+		);
+	}
+
+	public getServerImpl() {
+		return this.engine;
+	}
+}
 
 
-export default app;
+
+export default new App().getServerImpl();
 
