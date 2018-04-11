@@ -11,6 +11,8 @@ app.set("port", process.env.PORT || 3001);
 // configure server view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+// setting html pretty-print
+app.locals.pretty = true;
 app.use(
 	express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
 );
