@@ -6,15 +6,16 @@ WORKDIR /usr/src/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY ./package*.json ./
-COPY ./src ./
-COPY ./views ./
-COPY ./static.ts ./
+#COPY ./src ./
+#COPY ./views ./
+#COPY ./static.ts ./
 
 RUN npm install
+COPY . .
 # When building code for production
 # RUN npm install --only=production
 # Build and Bundle app source
-RUN npm run build
+RUN npm run build-ts
 COPY . .
 
 # define app ports
