@@ -11,6 +11,8 @@ RUN npm install
 # When building code for production
 # RUN npm install --only=production
 
+COPY static.ts ./
+
 # Build and Bundle app source
 RUN npm run build
 COPY . .
