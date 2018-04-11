@@ -94,12 +94,15 @@ Print the output of your app:
 	Running on http://localhost:8080
 ````
 
-
-
-
 If you need to go inside the container you can use the exec command:
+````bash
 	# Enter the container
 	$ docker exec -it imoracle /bin/bash
+````
 
 To test your app, get the port of your app that Docker mapped:
+````bash
 	$ docker ps
+````
+
+

@@ -12,13 +12,13 @@ RUN npm install
 # RUN npm install --only=production
 
 # Build and Bundle app source
-COPY . .
 RUN npm run build
+COPY . .
 
 # define app ports
 ENV PORT 8001
 EXPOSE 8001
 
 # run the app
-CMD ["node", "dist/"]
+CMD ["node", "/usr/src/app/dist/server.js"]
 
