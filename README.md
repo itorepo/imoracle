@@ -62,6 +62,7 @@ to make it up and running:
 
 
 ### Using the Docker image
+----
 
 Go to the directory that has your Dockerfile and run the following command
 ````bash
