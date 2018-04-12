@@ -4,11 +4,12 @@
 	"description": "Node.js TypeScript Express - starter application",
 	"main": "dist/server.js",
 	"scripts": {
-		"build": "npm run copy-assets && npm run build-ts",
+		"build": "npm run clear && npm run copy-assets && npm run build-ts",
 		"test": "npm run test",
 		"serve": "node dist/server.js",
 		"build-ts": "tsc -p ./tsconfig.json",
-		"copy-assets": "ts-node ./static.ts",
+		"copy-assets": "grunt dist",
+		"clear": "ts-node ./static.ts",
 		"tslint": "tslint -c tslint.json -p tsconfig.json"
 	},
 	"repository": {
@@ -33,6 +34,9 @@
 		"@types/express": "^4.11.1",
 		"@types/node": "^9.6.4",
 		"@types/supertest": "^2.0.4",
+		"grunt": "^1.0.2",
+		"grunt-contrib-clean": "^1.1.0",
+		"grunt-contrib-copy": "^1.0.0",
 		"supertest": "^3.0.0",
 		"ts-node": "^5.0.1",
 		"tslint": "^5.9.1",
