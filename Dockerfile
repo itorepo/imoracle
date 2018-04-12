@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN npm install
-RUN npm run build-ts
+RUN npm run build
 # When building code for production
 # RUN npm install --only=production
 
@@ -18,8 +18,6 @@ RUN npm run build-ts
 ENV PORT 8001
 EXPOSE 8001
 
-RUN npm run serve
-
 # run the app
-#CMD ["node", "/usr/src/app/dist/server.js"]
+CMD ["node", "dist/server.js"]
 
