@@ -7,9 +7,9 @@ Set of best practices for creating NTE stack based applications applied from dif
 ----
 
 First of all you need to have `git` SCM installed on your target machine!
-You may check it present by executing `git --version` command at any terminal of your choise.
+You may check it present by executing `git --version` command at any terminal of your choice.
 
-Next, you need to have the uptodate `Node.js` runtime and `NPM` package manager versions on your computer. 
+Next, you need to have the up-to-date `Node.js` runtime and `NPM` package manager versions on your computer. 
 Check it by running:
 ````bash
 	node --version
@@ -18,12 +18,12 @@ Check it by running:
 Node version `^9.5.0` and NPM version `5.6.0` must be fine
 
 
-Finaly, you will need the TypeScript2 compiling and linting binaries installed:
+Finally, you will need the TypeScript 2 compiling and linting binaries installed:
 ````bash
 	npm install --global typescript ts-node tslint
 ````
 
-**Note:** installing packages globally may require `sudo` rigths on some environments, hovever,
+**Note:** installing packages globally may require `sudo` rights on some environments, hoverer,
 it is strongly suggested to install them, as they will help to avoid multiple runtime issues!
 
 ### Setup
@@ -78,7 +78,6 @@ Run the image:
 ````
 	$ docker run -p 8080:8001 -d <your username>/imoracle
 ````
-
 with `-d` the container runs in detached mode, leaving the container running in the background.
 The `-p` flag redirects a public port to a private port inside the container
 
@@ -88,7 +87,7 @@ Print the output of your app:
 	$ docker ps
 
 	# Print app output
-	$ docker logs imoracle
+	$ docker logs <ID> 
 
 	# Example
 	Running on http://localhost:8080
@@ -97,7 +96,7 @@ Print the output of your app:
 If you need to go inside the container you can use the exec command:
 ````bash
 	# Enter the container
-	$ docker exec -it imoracle /bin/bash
+	$ docker exec -it <ID> /bin/bash
 ````
 
 To test your app, get the port of your app that Docker mapped:
