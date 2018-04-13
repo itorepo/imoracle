@@ -1,4 +1,14 @@
-import app from "./app";
+/**
+ * A module that defines the application server itself which
+ * is an entry point for whole application to run and to server
+ * user requests via HTTP.
+ *
+ * @module imoracle/server.ts
+ * @author Kostyantyn Didenko <kdidenko@ito-global.com>
+ * @date   12.04.2018
+ **/
+
+import app from "./App";
 
 /**
  * starts express server
