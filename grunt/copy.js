@@ -30,12 +30,18 @@ module.exports = function (grunt) {
 					src: ['README.md', 'LICENSE'], 
 					dest: '<%= paths.dist %>', expand: true 
 				},{
-					// copy all assets and templates 
-					cwd: '<%= paths.src %>',
-					src: ['public/**', 'views/**'],
+					// copy all static  assets 
+					cwd: '<%= paths.root %>',
+					src: ['public/**'],
 					dest: '<%= paths.dist %>',
 					expand: true
-			},]
+				},{
+					// copy view engine templates 
+					cwd: '<%= paths.src %>',
+					src: ['views/**'],
+					dest: '<%= paths.dist %>',
+					expand: true
+			}]
 		}
 	});
 
